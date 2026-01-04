@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $1 -gt $2 ]; then
+	echo "$1 is greater number"
+else
+	echo "$2 will be greater number"
+fi
