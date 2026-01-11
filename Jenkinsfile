@@ -1,5 +1,8 @@
 pipeline {
     agent any
+        environment {
+            NAME = 'shivu'
+        }
         stages {
             stage("parellel stages") {
                 parallel {
@@ -8,6 +11,7 @@ pipeline {
                         sh '''
                             python3 even.py
                                 echo "Test the stage"
+                                echo "$NAME"
                                 '''
             }
         }
