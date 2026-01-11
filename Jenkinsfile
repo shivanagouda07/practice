@@ -4,7 +4,7 @@ pipeline {
             stage('Test stage') {
                 steps {
                 sh '''
-                    python3 even.sh
+                    python3 even.py
                     echo"Test the stage"
                     '''
             }
