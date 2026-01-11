@@ -8,7 +8,7 @@ pipeline {
                 parallel {
                   stage('Test stage') {
                     steps {
-                        echo $NAME
+                        echo "$NAME"
                         sh '''
                             python3 even.py
                                 echo "Test the stage"
