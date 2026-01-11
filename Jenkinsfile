@@ -2,7 +2,7 @@ pipeline {
     agent any
         stages {
             stage("parellel stages") {
-                parellel{
+                parallel {
                   stage('Test stage') {
                     steps {
                         sh '''
@@ -14,7 +14,7 @@ pipeline {
 
                     stage("Test1 stage running parellel") {
                         steps {
-                            echo "this is just a parellel stage"
+                            sh ' echo Running stage 2'
                         }
                     }
 
